@@ -146,6 +146,10 @@
     backdrop-filter: blur(5px); /* Add this line */
   }
 
+  /* .activeLink {
+    margin-left: 5rem;
+  } */
+
   .overlay.visible {
     opacity: 1;
     visibility: visible;
@@ -158,6 +162,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    gap: 3rem;
     width: 100%;
     height: 98vh;
     transition: 0.3s all ease-in;
@@ -178,6 +183,11 @@
     line-height: 0.8;
     text-transform: uppercase;
     letter-spacing: -1px;
+    transition: 0.2s all ease-in;
+  }
+
+  .navItem:hover {
+    margin-left: 1rem;
   }
 
   .bottomDesktop {

@@ -17,6 +17,12 @@ const thunder = localFont({
   display: "swap",
 });
 
+const tuskerGrotesk = localFont({
+  src: "../../public/fonts/tuskerGrotesk.ttf",
+  variable: "--tuskerGrotesk",
+  display: "swap",
+});
+
 export default function RootLayout({
   children,
 }: {
@@ -24,7 +30,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={`${spaceMono.variable} ${thunder.variable}`}>
+      <body
+        className={`${spaceMono.variable} ${thunder.variable} ${tuskerGrotesk.variable}`}
+      >
         <Nav />
         {children}
       </body>
