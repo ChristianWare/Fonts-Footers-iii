@@ -2,6 +2,7 @@ import LayoutWrapper from "../LayoutWrapper/LayoutWrapper";
 import styles from "./Hero.module.css";
 import ShuffleHero from "../ShuffleHero/ShuffleHero";
 import Button from "../Button/Button";
+import Slider from "../Slider/Slider";
 
 const Hero = () => {
   return (
@@ -26,6 +27,7 @@ const Hero = () => {
           </div>
         </div>
       </LayoutWrapper>
+      <Slider />
     </section>
   );
 };
