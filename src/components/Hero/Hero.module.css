@@ -8,6 +8,13 @@
   grid-gap: 5rem;
 }
 
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
 .heading {
   font-size: 10rem;
   letter-spacing: 2px;
@@ -17,6 +24,7 @@
 .copy {
   font-size: 1.8rem;
   width: 90%;
+  margin-top: 1rem;
 }
 
 .right {
@@ -42,5 +50,39 @@
 @media screen and (max-width: 1068px) {
   .content {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .heading,
+  .copy {
+    text-align: center;
+  }
+
+  .btnContainer {
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: repeat(1, 1fr);
+    width: 50vw;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .heading {
+    font-size: 7rem;
+    width: 100%;
+  }
+
+  .heading,
+  .copy {
+    text-align: left;
+  }
+
+  .btnContainer {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .heading {
+    font-size: 5rem;
   }
 }
