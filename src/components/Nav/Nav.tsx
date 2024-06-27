@@ -73,10 +73,20 @@ function Nav() {
 
   return (
     <>
+        {isOpen && (
+          <div
+            className={`${styles.overlay} ${
+              isOverlayVisible ? styles.visible : ""
+            }`}
+            onClick={() => {
+              setIsOpen(false);
+              setIsOverlayVisible(false);
+            }}
+          ></div>
+        )}
       <header className={styles.header}>
         <nav className={styles.navbar}>
           <div className={styles.logo}>
-            {/* <Thunder width={30} height={30} className={styles.icon} /> */}
             <span>FONTS</span> & Footers
           </div>
           <ul
@@ -114,17 +124,7 @@ function Nav() {
               </li>
             ))}
           </ul>
-          {isOpen && (
-            <div
-              className={`${styles.overlay} ${
-                isOverlayVisible ? styles.visible : ""
-              }`}
-              onClick={() => {
-                setIsOpen(false);
-                setIsOverlayVisible(false);
-              }}
-            ></div>
-          )}
+
           <div className={styles.btnContainer}>
             <Button
               href='mailto:fontsandfooters@gmail.com'
