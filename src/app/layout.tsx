@@ -1,6 +1,7 @@
 import { Space_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import Nav from "@/components/Nav/Nav";
 
 const spaceMono = Space_Mono({
   weight: ["400", "700"],
@@ -24,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={`${spaceMono.variable} ${thunder.variable}`}>
+        <Nav />
         {children}
       </body>
     </html>

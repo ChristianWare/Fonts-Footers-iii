@@ -1,5 +1,13 @@
 import LayoutWrapper from "../LayoutWrapper/LayoutWrapper";
+import Scene from "../Scene/Scene";
 import styles from "./Hero.module.css";
+import dynamic from "next/dynamic";
+
+
+// const SceneConfig = dynamic(() => import("../Scene/Scene"), {
+//   ssr: false,
+// });
+
 
 const Hero = () => {
   return (
@@ -7,7 +15,9 @@ const Hero = () => {
       <LayoutWrapper>
         <div className={styles.content}>
           <div className={styles.left}>
-            <h1 className={styles.heading}>Heading Here</h1>
+            <h1 className={styles.heading}>
+              We build interactive immersive web applications.
+            </h1>
             <p className={styles.copy}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
               minima sint ipsum error beatae repellat deleniti corrupti,
@@ -16,7 +26,7 @@ const Hero = () => {
             </p>
           </div>
           <div className={styles.right}>
-            
+            <Scene />
           </div>
         </div>
       </LayoutWrapper>
