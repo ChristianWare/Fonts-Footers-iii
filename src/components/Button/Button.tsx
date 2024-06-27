@@ -3,7 +3,7 @@
 import { FC } from "react";
 import Link from "next/link";
 import { ButtonProps } from "@/lib/interface";
-// import Arrow2 from "../../../public/icons/arrow2.svg";
+import Arrow2 from "../../../public/icons/arrow2.svg";
 
 import styles from "./Button.module.css";
 
@@ -20,7 +20,7 @@ const Button: FC<ButtonProps> = ({
     <button
       className={styles.container}
       onClick={() => {
-        if (onClick) onClick(); // Call the onClick prop if it exists
+        if (onClick) onClick();
       }}
     >
       <Link
@@ -30,7 +30,7 @@ const Button: FC<ButtonProps> = ({
         download={download}
       >
         {text}
-        {/* {arrow && <Arrow2 className={styles.icon2} />} */}
+        {arrow && <Arrow2 className={styles.icon2} />}
       </Link>
     </button>
   );

@@ -10,14 +10,6 @@
   background-color: transparent;
 }
 
-.green3 {
-  border-color: var(--green3);
-}
-
-.tan {
-  border-color: var(--tan);
-}
-
 @media screen and (max-width: 568px) {
   .layout {
     padding-right: 10px;

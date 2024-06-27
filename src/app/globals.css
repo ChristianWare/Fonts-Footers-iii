@@ -3,7 +3,9 @@
   --white: #ffffff;
   --tan: #f3f1ed;
   --green: #2cdb94;
+  --green2: #5de9a2;
   --gray: #dfdddd;
+  --gray2: #ebeaea;
 }
 
 * {
@@ -57,7 +59,6 @@ h1 {
   font-size: 7rem;
   line-height: 90%;
   text-transform: uppercase;
-  /* letter-spacing: 2px; */
 }
 
 h2 {
@@ -109,22 +110,22 @@ textarea:focus {
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background: var(--green2);
-  color: var(--blue);
+  background: var(--green);
+  color: var(--black);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--green2);
-  color: var(--blue);
+  background: var(--green);
+  color: var(--black);
 }
 
 ::selection {
-  background: var(--green2);
-  color: var(--blue);
+  background: var(--green);
+  color: var(--black);
 }
 ::-moz-selection {
-  background: var(--green2);
-  color: var(--blue);
+  background: var(--green);
+  color: var(--black);
 }
 
 .toastFont {
@@ -136,10 +137,6 @@ textarea:focus {
   html {
     font-size: 55%;
   }
-
-  /* p {
-    font-size: 113.7%;
-  } */
 }
 
 @media screen and (max-width: 568px) {

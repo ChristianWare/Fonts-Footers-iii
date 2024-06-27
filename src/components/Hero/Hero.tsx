@@ -1,13 +1,7 @@
 import LayoutWrapper from "../LayoutWrapper/LayoutWrapper";
-import Scene from "../Scene/Scene";
 import styles from "./Hero.module.css";
-import dynamic from "next/dynamic";
-
-
-// const SceneConfig = dynamic(() => import("../Scene/Scene"), {
-//   ssr: false,
-// });
-
+import ShuffleHero from "../ShuffleHero/ShuffleHero";
+import Button from "../Button/Button";
 
 const Hero = () => {
   return (
@@ -16,17 +10,20 @@ const Hero = () => {
         <div className={styles.content}>
           <div className={styles.left}>
             <h1 className={styles.heading}>
-              We build interactive immersive web applications.
+              We build interactive and immersive web applications.
             </h1>
             <p className={styles.copy}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
               minima sint ipsum error beatae repellat deleniti corrupti,
-              doloremque illo. Eum nemo laudantium blanditiis eos minus
-              consequatur a inventore illo aut.
+              doloremque illo.
             </p>
+            <div className={styles.btnContainer}>
+              <Button href='/' text='button 1' btnType='secondary' arrow />
+              <Button href='/' text='button 1' btnType='secondaryii' arrow />
+            </div>
           </div>
           <div className={styles.right}>
-            <Scene />
+            <ShuffleHero />
           </div>
         </div>
       </LayoutWrapper>
