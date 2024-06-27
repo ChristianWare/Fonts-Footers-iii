@@ -1,0 +1,17 @@
+.container {
+  background-color: var(--tan);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr;
+}
+
+.heading {
+  font-size: 12.4rem;
+  letter-spacing: 2px;
+}
+
+.copy {
+  font-size: 1.8rem;
+}
