@@ -7,6 +7,7 @@ export interface ButtonProps {
   target?: string;
   download?: boolean;
   arrow?: boolean;
+  arrowColor?: string;
   onClick?: any;
 }
 

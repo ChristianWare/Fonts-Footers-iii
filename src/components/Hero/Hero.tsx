@@ -18,8 +18,7 @@ const Hero = () => {
               doloremque illo.
             </p>
             <div className={styles.btnContainer}>
-              <Button href='/' text='button 1' btnType='secondary' arrow />
-              {/* <Button href='/' text='button 1' btnType='secondaryii' arrow /> */}
+              <Button href='/' text='Enquire Now' btnType='secondary' arrow />
             </div>
           </div>
           <div className={styles.right}>

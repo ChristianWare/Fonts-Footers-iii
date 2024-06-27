@@ -5,36 +5,37 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Button from "../Button/Button";
 import { usePathname } from "next/navigation";
+import Thunder from "../../../public/icons/thunder.svg";
 
 const navItems = [
   {
-    text: "Benefits",
-    href: "/benefits",
+    text: "Services",
+    href: "/services",
   },
   {
-    text: "About US",
-    href: "/about",
+    text: "Our Work",
+    href: "/work",
   },
   {
     text: "Pricing",
     href: "/pricing",
   },
   {
-    text: "FAQS",
-    href: "/faqs",
+    text: "About",
+    href: "/about",
   },
-  {
-    text: "Blog",
-    href: "/blog",
-  },
-  {
-    text: "Glossary",
-    href: "/glossary",
-  },
-  {
-    text: "Contact",
-    href: "/contact",
-  },
+  // {
+  //   text: "Blog",
+  //   href: "/blog",
+  // },
+  // {
+  //   text: "Glossary",
+  //   href: "/glossary",
+  // },
+  // {
+  //   text: "Contact",
+  //   href: "/contact",
+  // },
 ];
 
 function Nav() {
@@ -69,14 +70,16 @@ function Nav() {
     };
   }, [isOpen]);
 
-  
-
   const pathname = usePathname();
 
   return (
     <>
       <header className={styles.header}>
         <nav className={styles.navbar}>
+          <div className={styles.logo}>
+            {/* <Thunder width={30} height={30} className={styles.icon} /> */}
+            <span>FONTS</span> & Footers
+          </div>
           <ul
             className={
               isOpen === false
@@ -86,13 +89,7 @@ function Nav() {
           >
             <li className={styles.navItem} onClick={() => setIsOpen(false)}>
               <Link href='/' className={styles.navItem}>
-                {pathname === "/" ? (
-                  <>
-                    Home
-                  </>
-                ) : (
-                  "Home"
-                )}
+                Home
               </Link>
             </li>
             {navItems.map((navItem, index) => (
@@ -102,31 +99,11 @@ function Nav() {
                 onClick={() => setIsOpen(false)}
               >
                 <Link href={navItem.href} className={styles.navItem}>
-                  {pathname.includes(navItem.href) && (
-                    <>
-                      {navItem.text}
-                    </>
-                  )}
+                  {pathname.includes(navItem.href) && <>{navItem.text}</>}
                   {!pathname.includes(navItem.href) && navItem.text}{" "}
                 </Link>
               </li>
             ))}
-            {/* {isOpen && (
-              <div className={styles.btnContainerMobile}>
-                <Button
-                  href='/contact'
-                  text='Call Us'
-                  btnType='secondary'
-                  arrow
-                />
-                <Button
-                  href='/contact/#schedule'
-                  text='Schedule a call'
-                  btnType='secondary'
-                  arrow
-                />
-              </div>
-            )} */}
           </ul>
           {isOpen && (
             <div
@@ -142,14 +119,12 @@ function Nav() {
           <div className={styles.btnContainer}>
             <Button
               href='mailto:fontsandfooters@gmail.com'
-              text='email us'
+              text="Let's Talk"
               btnType='secondaryNav'
+              arrow
+              arrowColor='tan'
             />
-            <Button
-              href='/contact/#schedule'
-              text='Schedule a call'
-              btnType='primaryNav'
-            />
+           
           </div>
           <span
             className={

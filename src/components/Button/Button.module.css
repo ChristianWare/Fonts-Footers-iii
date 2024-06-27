@@ -6,7 +6,7 @@
 .btn {
   font-family: var(--oswald);
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 700;
   white-space: nowrap;
   text-transform: uppercase;
@@ -35,6 +35,10 @@
   position: absolute;
   right: 10px;
   transition: all 0.1s ease-in-out;
+}
+
+.tan {
+  color: var(--tan);
 }
 
 .btn:hover .icon2 {
@@ -89,10 +93,15 @@
 }
 
 .secondaryNav {
-  color: var(--green);
-  background-color: var(--white);
-  border: 1px solid var(--green);
-  padding: 5px 30px;
+  color: var(--tan);
+  background-color: var(--black);
+  border: 1px solid var(--gray);
+  padding: 8px 50px;
+  padding-left: 20px;
+}
+
+.secondaryNav:hover {
+  background-color: var(--black2);
 }
 
 .secondaryii:hover {
