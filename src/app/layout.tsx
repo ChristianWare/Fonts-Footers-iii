@@ -12,7 +12,7 @@ const spaceMono = Space_Mono({
 });
 
 const thunder = localFont({
-  src: "../../public/fonts/Thunder-MediumLC.ttf",
+  src: "../../public/fonts/Thunder-SemiBoldLC.ttf",
   variable: "--thunder",
   display: "swap",
 });
