@@ -2,3 +2,9 @@
   position: relative;
   height: 100%;
 }
+
+@media screen and (max-width: 1068px) {
+  .main {
+    height: 50vh;
+  }
+}
