@@ -5,7 +5,6 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Button from "../Button/Button";
 import { usePathname } from "next/navigation";
-import Thunder from "../../../public/icons/thunder.svg";
 
 const navItems = [
   {
@@ -88,7 +87,12 @@ function Nav() {
             }
           >
             <li className={styles.navItem} onClick={() => setIsOpen(false)}>
-              <Link href='/' className={styles.navItem}>
+              <Link
+                href='/'
+                className={`${styles.navItem} ${
+                  pathname === "/" ? styles.activeLink : ""
+                }`}
+              >
                 Home
               </Link>
             </li>
@@ -98,7 +102,12 @@ function Nav() {
                 className={styles.navItem}
                 onClick={() => setIsOpen(false)}
               >
-                <Link href={navItem.href} className={styles.navItem}>
+                <Link
+                  href={navItem.href}
+                  className={`${styles.navItem} ${
+                    pathname === navItem.href ? styles.activeLink : ""
+                  }`}
+                >
                   {pathname.includes(navItem.href) && <>{navItem.text}</>}
                   {!pathname.includes(navItem.href) && navItem.text}{" "}
                 </Link>
@@ -124,7 +133,6 @@ function Nav() {
               arrow
               arrowColor='tan'
             />
-           
           </div>
           <span
             className={
