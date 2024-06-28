@@ -46,28 +46,28 @@ function Nav() {
     setIsOverlayVisible(!isOverlayVisible);
   };
 
-  useEffect(() => {
-    const body = document.querySelector("body");
-    if (body) {
-      if (window.innerWidth <= 968 && isOpen) {
-        body.style.overflow = "hidden";
-      } else {
-        body.style.overflow = "auto";
-      }
-    }
+  // useEffect(() => {
+  //   const body = document.querySelector("body");
+  //   if (body) {
+  //     if (window.innerWidth <= 968 && isOpen) {
+  //       body.style.overflow = "hidden";
+  //     } else {
+  //       body.style.overflow = "auto";
+  //     }
+  //   }
 
-    const handleResize = () => {
-      setIsOpen(false);
-      window.addEventListener("resize", handleResize);
-    };
+  //   const handleResize = () => {
+  //     setIsOpen(false);
+  //     window.addEventListener("resize", handleResize);
+  //   };
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-      if (body) {
-        body.style.overflow = "auto";
-      }
-    };
-  }, [isOpen]);
+  //   return () => {
+  //     window.removeEventListener("resize", handleResize);
+  //     if (body) {
+  //       body.style.overflow = "auto";
+  //     }
+  //   };
+  // }, [isOpen]);
 
   const pathname = usePathname();
 

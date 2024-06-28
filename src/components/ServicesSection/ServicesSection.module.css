@@ -1,0 +1,139 @@
+.container {
+  background-color: var(--tan);
+  padding-top: 20rem;
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.bottomLeft {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+
+.card {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8rem;
+  height: 100%;
+}
+
+.cardTop {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.ball {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--black);
+}
+
+.cardBottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.title {
+  text-transform: uppercase;
+  color: var(--green);
+  font-size: 4rem;
+}
+
+.desc {
+  color: var(--black);
+  opacity: 0.8;
+}
+
+.heading {
+  text-transform: uppercase;
+  font-size: 7rem;
+  text-align: right;
+}
+
+.copy {
+  text-align: right;
+  color: var(--black);
+  font-size: 1.8rem;
+  width: 70%;
+  margin-left: auto;
+}
+
+.bottom2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+}
+
+.img {
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.card:nth-child(5) {
+  background-color: var(--tan);
+  border: none;
+}
+
+.card:nth-child(5) .ball {
+  display: none;
+}
+
+@media screen and (max-width: 1068px) {
+  .bottom {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .bottom2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bottomRight {
+    order: -1;
+  }
+
+  .card:nth-child(5) {
+    display: none;
+  }
+
+  .heading {
+    text-align: center;
+  }
+
+  .copy {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .bottomLeft {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .bottom2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .imgContainer {
+    height: 75px;
+  }
+}

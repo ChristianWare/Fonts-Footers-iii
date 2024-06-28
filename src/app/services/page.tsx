@@ -1,7 +1,14 @@
+import Hero from "@/components/Hero/Hero";
+
 export default function ServicesPage() {
   return (
     <main>
-      <h1>Services Page</h1>
+      <Hero />
+      <Hero />
+      <Hero />
+      <Hero />
+      <Hero />
+      <Hero />
     </main>
   );
 }

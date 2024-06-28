@@ -5,7 +5,7 @@
   --tan: #f3f1ed;
   --green: #2cdb94;
   --green2: #5de9a2;
-  --green3: #169D81;
+  --green3: #169d81;
   --gray: #dfdddd;
   --gray2: #ebeaea;
 }
@@ -16,7 +16,7 @@
   box-sizing: border-box;
   text-decoration: none;
   line-height: 120%;
-  font-family: var(--spaceMono);
+  font-family: var(--inter);
   overscroll-behavior: none;
   scroll-behavior: smooth;
   scroll-margin-top: 40px;
@@ -70,7 +70,7 @@ h2 {
 h3 {
   font-size: 2.6rem;
   line-height: 130%;
-  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 h4 {
